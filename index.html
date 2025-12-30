@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süße Träume – Konditorei</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<section class="hero" id="home">
+    <div class="hero-background">
+        <div class="background-layer layer-cake"></div>
+        <div class="background-layer layer-cupcake"></div>
+    </div>
+
+    <div class="hero-content">
+        <h1>Süße Träume</h1>
+        <p>Handgemachte Köstlichkeiten für jeden Anlass</p>
+        <a href="#order" class="cta-button">Jetzt bestellen</a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="container">
+        <h2>Über unsere Konditorei</h2>
+        <p>
+            Seit über 20 Jahren verwöhnen wir unsere Kunden mit handgemachten Torten,
+            Kuchen und süßen Spezialitäten. Jedes Produkt wird mit Liebe hergestellt.
+        </p>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <div class="container">
+        <h2>Unsere Spezialitäten</h2>
+
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://placehold.co/300x200/FFB6C1/000000?text=Schokotorte" alt="Schokoladentorte">
+                <h3>Schokoladentorte</h3>
+            </div>
+
+            <div class="product-item">
+                <img src="https://placehold.co/300x200/FFD700/000000?text=Obstkuchen" alt="Obstkuchen">
+                <h3>Obstkuchen</h3>
+            </div>
+
+            <div class="product-item">
+                <img src="https://placehold.co/300x200/FF69B4/FFFFFF?text=Cupcakes" alt="Cupcakes">
+                <h3>Cupcakes</h3>
+            </div>
+
+            <div class="product-item">
+                <img src="https://placehold.co/300x200/87CEEB/000000?text=Macarons" alt="Macarons">
+                <h3>Macarons</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="order-section" id="order">
+    <div class="container">
+        <h2>Bestellen Sie jetzt</h2>
+
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="product">Produkt</label>
+                <select id="product" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="torte">Torte</option>
+                    <option value="kuchen">Kuchen</option>
+                    <option value="cupcakes">Cupcakes</option>
+                    <option value="macarons">Macarons</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Nachricht (optional)</label>
+                <textarea id="message" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Bestellung senden</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="#">Kontakt</a>
+        </div>
+        <p>&copy; 2025 Süße Träume Konditorei</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
