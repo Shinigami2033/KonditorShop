@@ -1,172 +1,218 @@
+/* ========================================= */
+/* 1. CSS VARIABLEN                          */
+/* ========================================= */
+
 :root {
-    --primary: #FF69B4;
-    --primary-dark: #FF1493;
-    --text: #333;
-    --bg-light: #f8f9fa;
+  --primary: #FF69B4;
+  --primary-dark: #FF1493;
+  --text: #333;
+  --bg-light: #f8f9fa;
 }
 
+
+/* ========================================= */
+/* 2. RESET & GRUNDLAGEN                     */
+/* ========================================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: #fff;
 }
+
+
+/* ========================================= */
+/* 3. LAYOUT & CONTAINER                     */
+/* ========================================= */
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* HERO */
+/* Schmalerer Textbereich für About / Legal */
+.about .container {
+  max-width: 800px;
+}
+
+
+/* ========================================= */
+/* 4. HERO SECTION                           */
+/* ========================================= */
+
 .hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 .hero-background,
 .background-layer {
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: 0;
 }
 
 .background-layer {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
+/* Hero Hintergrundbilder */
 .layer-cake {
-    background-image: url("https://placehold.co/1200x800/FFD700/000000?text=Torten");
-    opacity: 0.3;
+  background-image: url("https://placehold.co/1200x800/FFD700/000000?text=Torten");
+  opacity: 0.3;
 }
 
 .layer-cupcake {
-    background-image: url("https://placehold.co/1200x800/FF69B4/FFFFFF?text=Cupcakes");
-    opacity: 0.2;
+  background-image: url("https://placehold.co/1200x800/FF69B4/FFFFFF?text=Cupcakes");
+  opacity: 0.2;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin: 20px 0;
+  font-size: 1.5rem;
+  margin: 20px 0;
 }
+
+
+/* ========================================= */
+/* 5. BUTTONS & INTERAKTIONEN                */
+/* ========================================= */
 
 .cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
+  display: inline-block;
+  padding: 15px 30px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.3s;
 }
 
-/* SECTIONS */
-.about {
-    padding: 80px 0;
-    background: var(--bg-light);
-    text-align: center;
+.cta-button:hover {
+  background: var(--primary-dark);
+  transform: scale(1.05);
 }
+
+
+/* ========================================= */
+/* 6. CONTENT SECTIONS                       */
+/* ========================================= */
+
+/* ---------- About ---------- */
+
+.about {
+  padding: 80px 0;
+  background: var(--bg-light);
+  text-align: center;
+}
+
+/* ---------- Products ---------- */
 
 .products {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .product-item {
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.1);
 }
 
-/* FORM */
+
+/* ========================================= */
+/* 7. ORDER / FORMULAR                       */
+/* ========================================= */
+
 .order-section {
-    background: #fff5f7;
-    padding: 80px 0;
+  background: #fff5f7;
+  padding: 80px 0;
 }
 
 form {
-    max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
 }
 
 .submit-button {
-    width: 100%;
-    padding: 15px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    font-weight: 600;
+  width: 100%;
+  padding: 15px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-/* FOOTER */
+
+/* ========================================= */
+/* 8. FOOTER                                 */
+/* ========================================= */
+
 .footer {
-    background: #333;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
+  background: #333;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .footer-links a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-}
 
-/* ============================= */
-/* Datenschutz & Impressum Fix  */
-/* ============================= */
-
-.about .container {
-  max-width: 800px;
-}
+/* ========================================= */
+/* 9. RECHTLICHE SEITEN                      */
+/* Datenschutz & Impressum                  */
+/* ========================================= */
 
 .about.datenschutz p,
 .about.impressum p {
@@ -189,4 +235,25 @@ input, select, textarea {
 .about.datenschutz li,
 .about.impressum li {
   margin-bottom: 0.5em;
+}
+
+
+/* ========================================= */
+/* 10. RESPONSIVE DESIGN                    */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .about,
+  .products,
+  .order-section {
+    padding: 50px 0;
+  }
 }
