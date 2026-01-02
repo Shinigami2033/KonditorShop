@@ -257,3 +257,78 @@ textarea {
     padding: 50px 0;
   }
 }
+
+/* ========================================= */
+/* 11. MOBILE OPTIMIERUNG – STARTSEITE           */
+/* ========================================= */
+
+@media (max-width: 768px) {
+
+  /* ---------- Hero ---------- */
+
+  .hero {
+    height: 80vh; /* weniger Scrollen */
+    padding: 40px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin: 15px 0 25px;
+  }
+
+  /* ---------- Buttons ---------- */
+
+  .cta-button {
+    padding: 16px 28px;
+    font-size: 1rem;
+  }
+
+  /* ---------- Sections ---------- */
+
+  .about,
+  .products,
+  .order-section {
+    padding: 50px 0;
+  }
+
+  .about p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* ---------- Products ---------- */
+
+  .product-grid {
+    gap: 20px;
+  }
+
+  .product-item {
+    padding: 16px;
+  }
+
+  /* ---------- Form ---------- */
+
+  form {
+    padding: 25px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+  }
+
+  .submit-button {
+    padding: 16px;
+    font-size: 1rem;
+  }
+}
