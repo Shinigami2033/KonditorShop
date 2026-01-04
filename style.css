@@ -298,34 +298,10 @@ textarea::placeholder {
   color: var(--text-muted);
 }
 
-/* ==============================
-   9. Sticky Über-mich Banner
-============================== */
-.about-banner {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  background-color: #fff7e6; /* anpassbar */
-  border-bottom: 1px solid #e6dcc9;
-
-  text-align: center;
-  padding: 0.75em 1em;
-}
-
-.about-banner a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #6b4a2b;
-}
-
-.about-banner a:hover {
-  text-decoration: underline;
-}
 
 
 /* ========================================= */
-/* 10. FOOTER                                 */
+/* 9. FOOTER                                 */
 /* ========================================= */
 .footer {
   background: #060B1A;
@@ -341,7 +317,7 @@ textarea::placeholder {
 }
 
 /* ========================================= */
-/* 11. RECHTLICHE SEITEN                      */
+/* 10. RECHTLICHE SEITEN                      */
 /* Datenschutz & Impressum                  */
 /* ========================================= */
 .about.datenschutz p,
@@ -367,9 +343,9 @@ textarea::placeholder {
 }
 
 /* ========================================= */
-/* 12. RESPONSIVE DESIGN (Auskommentiert 11. übernimmt */
+/* 11. RESPONSIVE DESIGN (Auskommentiert 11. übernimmt */
 /* ========================================= */
-/* @media (max-width: 768px) {
+/*@media (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -386,7 +362,7 @@ textarea::placeholder {
 }
 
 /* ========================================= */
-/* 13. MOBILE OPTIMIERUNG – STARTSEITE           */
+/* 12. MOBILE OPTIMIERUNG – STARTSEITE           */
 /* ========================================= */
 @media (max-width: 768px) {
 
@@ -409,20 +385,6 @@ textarea::placeholder {
     font-size: 1.1rem;
     margin: 15px 0 25px;
   }
-
-  /* ---------- Sticky Über-mich Banner ---------- */
-    .about-banner {
-    font-size: 0.95rem;
-    padding: 0.6em;
-  }
-  /* ---------- Floating About Button ---------- */
-  .floating-about-btn {
-  top: 16px;
-  right: 16px;
-  padding: 12px 20px;
-  font-size: 0.95rem;
-}
-
 
   /* ---------- Buttons ---------- */
   .cta-button {
@@ -466,4 +428,14 @@ textarea::placeholder {
     padding: 16px;
     font-size: 1rem;
   }
+
+  /* ---------- Floating CTA Button ---------- */
+  .floating-cta {
+    top: 16px;
+    right: 16px;
+    padding: 14px 22px;
+    font-size: 0.95rem;
+  }
+
+
 }
