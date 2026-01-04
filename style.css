@@ -179,13 +179,6 @@ body {
     box-shadow 0.3s ease;
 }
 
-/* Hover Effekt */
-.floating-about-btn:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow:
-    0 0 30px rgba(230, 217, 162, 0.55),
-    0 12px 30px rgba(0,0,0,0.6);
-}
 
 /* ========================================= */
 /* FIXED CTA – ÜBER MICH                     */
