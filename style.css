@@ -88,15 +88,15 @@ body {
 
 /* Hero Hintergrundbilder */
 .layer-cake {
-  background-image: url("assets/Hochzeitstorte bearbeitet.jpeg");
+  background-image: url("assets/Logo1.jpeg");
   opacity: 0.3;
 }
-
+/*
 .layer-cupcake {
   background-image: url("https://placehold.co/1200x800/FF69B4/FFFFFF?text=Cupcakes");
   opacity: 0.2;
 }
-
+*/
 .hero-content {
   position: relative;
   z-index: 1;
