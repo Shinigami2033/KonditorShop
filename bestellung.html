@@ -3,275 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bestellung – Mondschein Konditorei</title>
+  <title>Bestellung - Mondschein Konditorei</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Floating Zurück Button -->
   <a href="index.html" class="cta-button floating-cta">
     Startseite
   </a>
+
   <div class="page-wrapper">
+    <main class="page form-page order-info-page">
+      <div class="container">
+        <p class="order-kicker">Bestellungen</p>
+        <h1>Bestellungen laufen über Instagram</h1>
+        <p class="order-intro">
+          Damit jede Torte, jedes Gebäck und jede Sonderanfertigung persönlich abgestimmt werden kann,
+          nehme ich Bestellungen direkt per Instagram-Nachricht entgegen und bearbeite sie dort individuell.
+        </p>
 
-  <main class="page form-page">
-    <div class="container">
+        <section class="order-info-panel" aria-label="So funktioniert die Bestellung">
+          <h2>So funktioniert es</h2>
+          <div class="order-steps">
+            <article>
+              <span>1</span>
+              <h3>Nachricht senden</h3>
+              <p>Schreibe mir auf Instagram, was du dir wünschst und für welchen Anlass du bestellen möchtest.</p>
+            </article>
 
-      <h1>Jetzt bestellen</h1>
-      <p>
-        Erzähle mir von deiner Wunschkreation –  
-        ich melde mich persönlich bei dir zurück.
-      </p>
+            <article>
+              <span>2</span>
+              <h3>Details klären</h3>
+              <p>Wir besprechen Geschmack, Größe, Datum, Design, Budget und mögliche Referenzbilder direkt im Chat.</p>
+            </article>
 
-      <!-- Submify Formular -->
-      <form id="orderForm"
-            action="https://submify.vercel.app/info@mondschein-konditorei.de"
-            method="POST"
-            enctype="multipart/form-data"
-            class="order-form">
-        <input type="hidden" name="_next" id="nextUrlField" value="">
-        <input type="hidden" name="redirect" id="redirectUrlField" value="">
-        <!-- Web3Forms API Key -->
-        <!--  <input type="hidden" name="access_key" value="tly-8icv1jv7soEpmGGJDUpk81YRV6HwJz64">
-        -->
-        <label> Felder mit * sind Pflichtfelder</label>
-        <label>
-          *Name
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          *E-Mail
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          *Produktart
-          <select name="product_type" required>
-            <option value="" disabled selected>Bitte wählen</option>
-            <option value="Torte">Torte</option>
-            <option value="Kuchen">Kuchen</option>
-            <option value="Cupcakes">Cupcakes</option>
-            <option value="Süße Fours">Süße Fours</option>
-            <option value="Sonstiges">Sonstiges</option>
-          </select>
-        </label> 
-
-        <label>
-          *Geschmacksrichtung
-          <input type="text" name="flavor" required>
-        </label>
-        
-        <label>
-          *Größe / Menge
-          <input type="text" name="size_quantity" required>
-        </label>
-
-        <label>
-          *Alkohol
-          <div class="radio-group">
-            <label class="radio-option">
-              <input type="radio" name="alcohol" value="Mit Alkohol" required>
-              Mit Alkohol
-            </label>
-
-            <label class="radio-option">
-              <input type="radio" name="alcohol" value="Ohne Alkohol">
-              Ohne Alkohol
-            </label>
+            <article>
+              <span>3</span>
+              <h3>Bestellung bestätigen</h3>
+              <p>Nach der Abstimmung bekommst du eine persönliche Rückmeldung zur Umsetzung und weiteren Planung.</p>
+            </article>
           </div>
-        </label>
+        </section>
 
-        <label>
-          Besondere Wünsche / Anmerkungen (optional)
-          <input type="text" name="special_requests">
-        </label>
+        <section class="order-note" aria-label="Hinweis zur Bestellung">
+          <h2>Bitte in deiner Nachricht angeben</h2>
+          <ul>
+            <li>Produktwunsch, zum Beispiel Torte, Cupcakes, Macarons oder Cake Pops</li>
+            <li>Datum der Abholung oder Lieferung</li>
+            <li>Personenzahl, Menge oder gewünschte Größe</li>
+            <li>Geschmacksrichtung, Designwünsche und Allergien</li>
+            <li>Referenzbilder, falls du eine bestimmte Vorstellung hast</li>
+          </ul>
+          <p>
+            Lieferungen sind nach Absprache im Umkreis von 30 km um Schwaan in Mecklenburg-Vorpommern möglich.
+          </p>
+        </section>
 
-        <label>
-          Budgetvorstellung (optional)
-          <input type="text" name="budget">
-        </label>  
-
-        <label>
-          *Abhol- oder Lieferdatum
-          <input type="date" name="pickup_delivery_date" required>
-        </label>
-
-        <label>
-          Geliefert werden kann in einem Umkreis von 30km um Schwaan in MV.
-        </label>
-
-        <label>
-          *Telefonnummer
-          <input type="tel" name="phone" required>
-        </label>
-
-        <label>
-          Allergien oder Unverträglichkeiten (optional)
-          <input type="text" name="allergies">
-        </label>        
-
-        <label>
-          Nachricht
-          <textarea name="message" rows="5"></textarea>
-        </label>
-
-        <label>
-          Referenzbild (optional)
-          <input
-          type="file"
-          name="reference_image"
-          accept="image/png, image/jpeg, image/jpg, image/gif"
-          id="imageUpload">        
-        </label>
-        <div id="imagePreview" class="image-preview"></div>
-        <button type="button" id="removeImageBtn" class="remove-image" style="display:none;">
-        Bild entfernen
-        </button>
-
-        <div id="uploadError" class="upload-error"></div>
-        
-        <label> max. 5 MB pro Bild 
-          <br>
-           max. 1 Bilder</label>
-        
-        <button type="submit" class="submit-button">
-          Anfrage senden
-        </button>
-        <label>
-          Mit dem Absenden dieses Formulars erklärst du dich damit einverstanden, dass deine Daten gemäß unserer <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a> verarbeitet werden。
-        </label>
-      </form>
-
-    </div>
-  </main>
+        <div class="order-actions">
+          <a
+            href="https://www.instagram.com/mondschein_konditorei?igsh=MWUydjFmdnUzZjlraQ=="
+            class="cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Auf Instagram bestellen
+          </a>
+          <a href="gallery.html" class="cta-button outline">
+            Inspiration ansehen
+          </a>
+        </div>
+      </div>
+    </main>
   </div>
-  <!-- JavaScript für Scroll-Effekt der CTA -->
-<script>
-  const cta = document.querySelector('.floating-cta');
 
-  if (cta) {
-    window.addEventListener('scroll', () => {
-      cta.classList.toggle('scrolled', window.scrollY > 20);
-    });
-  }
-</script>
+  <script>
+    const cta = document.querySelector('.floating-cta');
 
-<!-- JavaScript für Bildvorschau -->
-<script>
-const uploadInput = document.getElementById('imageUpload');
-const preview = document.getElementById('imagePreview');
-const removeBtn = document.getElementById('removeImageBtn');
-const errorBox = document.getElementById('uploadError');
-const orderForm = document.getElementById('orderForm');
-const nextUrlField = document.getElementById('nextUrlField');
-const redirectUrlField = document.getElementById('redirectUrlField');
-
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
-
-function showError(message) {
-  if (errorBox) {
-    errorBox.textContent = message;
-    errorBox.style.display = 'block';
-    errorBox.setAttribute('role', 'alert');
-  } else {
-    console.error('Upload error:', message);
-  }
-}
-
-function clearError() {
-  if (errorBox) {
-    errorBox.textContent = '';
-    errorBox.style.display = '';
-    errorBox.removeAttribute('role');
-  }
-}
-
-function resetImage(preserveError = false) {
-  if (uploadInput) uploadInput.value = '';
-  if (preview) preview.innerHTML = '';
-  if (removeBtn) removeBtn.style.display = 'none';
-  if (!preserveError) clearError();
-}
-
-if (uploadInput) {
-  uploadInput.addEventListener('change', () => {
-    clearError();
-    if (preview) preview.innerHTML = '';
-
-    const file = uploadInput.files[0];
-    if (!file) return;
-
-    if (uploadInput.files.length > 1) {
-      showError('Bitte maximal 1 Bild auswählen.');
-      resetImage(true);
-      return;
-    }
-
-    // Dateigröße prüfen
-    if (file.size > MAX_FILE_SIZE) {
-      showError('Das Bild darf maximal 5 MB groß sein.');
-      resetImage(true);
-      return;
-    }
-
-    // Typ prüfen
-    if (!file.type || !file.type.startsWith('image/')) {
-      showError('Bitte nur Bilddateien hochladen.');
-      resetImage(true);
-      return;
-    }
-
-    // Vorschau anzeigen
-    const img = document.createElement('img');
-    img.src = URL.createObjectURL(file);
-    img.classList.add('preview-image');
-
-    if (preview) preview.appendChild(img);
-    if (removeBtn) removeBtn.style.display = 'inline-block';
-  });
-}
-
-// Entfernen Button
-if (removeBtn) {
-  removeBtn.addEventListener('click', () => {
-    resetImage();
-  });
-}
-
-if (nextUrlField || redirectUrlField) {
-  const thankYouUrl = new URL('leitung.html', window.location.href).toString();
-  if (nextUrlField) nextUrlField.value = thankYouUrl;
-  if (redirectUrlField) redirectUrlField.value = thankYouUrl;
-}
-
-if (orderForm) {
-  orderForm.addEventListener('submit', async (event) => {
-    const submitBtn = orderForm.querySelector('.submit-button');
-
-    // Progressive enhancement: per Fetch senden und danach lokal weiterleiten.
-    if (!window.fetch || !window.FormData) return;
-
-    event.preventDefault();
-    if (submitBtn) submitBtn.disabled = true;
-
-    try {
-      const formData = new FormData(orderForm);
-      const response = await fetch(orderForm.action, {
-        method: 'POST',
-        body: formData
+    if (cta) {
+      window.addEventListener('scroll', () => {
+        cta.classList.toggle('scrolled', window.scrollY > 20);
       });
-
-      if (!response.ok) throw new Error(`Request failed: ${response.status}`);
-      window.location.href = 'leitung.html';
-    } catch (error) {
-      if (submitBtn) submitBtn.disabled = false;
-      orderForm.submit();
     }
-  });
-}
-
-</script>
+  </script>
 
 </body>
 </html>
